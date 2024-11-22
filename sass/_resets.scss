@@ -26,7 +26,6 @@ li {
 }
 
 p, li {
-    max-width: 65ch;
     text-wrap: pretty;
 }
 
@@ -36,4 +35,8 @@ a {
 
 body {
     min-height: 100vh;
+}
+
+fieldset {
+    border: none;
 }

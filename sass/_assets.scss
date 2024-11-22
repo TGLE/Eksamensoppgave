@@ -1,0 +1,30 @@
+@mixin categories-image($image-url) {
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background-image: url($image-url);
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        opacity: 0.7;
+    }
+}
+
+@mixin banner-image($image-url, $color) {
+    background-color: $color;
+    background-image: url($image-url);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: lighten;
+}
+
+@mixin banner-text($text-align, $margin-inline) {
+    text-align: $text-align;
+
+    h2, p {
+        max-width: 40ch;
+        margin-inline: $margin-inline;
+    }
+}
