@@ -3,14 +3,6 @@
 @import "../sass/media-queries";
 @import "../sass/assets";
 
-a {
-    color: $black;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
 body {
     font-family: "Roboto", sans-serif;
     background-color: $background-white;
@@ -21,11 +13,24 @@ body {
     grid-template-areas:
     "header header header"
     "main main main"
+    "aside aside aside"
     "footer footer footer";
 
     width: min(75rem, 100% - 1rem);
     margin-inline: auto;
     margin-block: 2.5rem 10rem;
+
+    a {
+        color: $black;
+    }
+
+    .space-right {
+        margin-right: 1rem;
+    }
+
+    .next-link {
+        color: $link-purple;
+    }
 
     header {
         grid-area: header;
@@ -108,80 +113,80 @@ body {
             }
         }
     }
-    
+
     main {
         grid-area: main;
-
+        
         h2 {
-            margin-bottom: 1.5rem;
+            margin-block: 1.5rem;
         }
 
-        .main-section {
+        .front-section {
             margin-block: 2.5rem;
         }
 
-        .banner-grid-container {
+        //INDEX CSS
+        .main-banner-area {
+            position: relative;
 
-            .banner {
-                padding-block: 10rem;
-                padding-inline: 2rem;
-                margin-block: 0;
-                border-radius: 2rem;
-                display: none;
+            .slider-button {
+                position: absolute;
+                top: 50%;
+                min-width: 3rem;
+                min-height: 3rem;
+                opacity: 0.7;
+                @include button();
 
                 &:nth-of-type(1) {
-                    @include banner-image("../images/sunset-8113697_1280.jpg", $dark-purple);
-                    @include banner-text(end, auto 0);
-                    display: block;
+                    left: 1rem;
                 }
 
                 &:nth-of-type(2) {
-                    @include banner-image("../images/landscape-7115513_1280.jpg", $dark-brown);
-                    @include banner-text(start, 0 auto);
-                    @include sm {
-                        display: block;
-                    }
+                    right: 1rem;
                 }
+            }
 
-                &:nth-of-type(3) {
-                    @include banner-image("../images/sand-6667422_1280.jpg", $dark-blue);
-                    @include banner-text(start, 0 auto);
-                    @include sm {
-                        display: block;
-                    }
-                }
+            .banner-grid-container {
+
+                .banner {
+                    padding-block: 10rem;
+                    padding-inline: 2rem;
+                    margin-block: 0;
+                    border-radius: 2rem;
+                    display: none;
     
-                button {
-                    display: inline-block;
-                    text-align: center;
-                    text-decoration: none;
-                
-                    border: none;
-                    border-radius: 100vh;
-                    padding: 0.5rem 1rem;
-                    margin-top: 1rem;
-                
-                    background-color: $white;
-                    color: $black;
-                    cursor: pointer;
-                    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
-                
-                    &:hover {
-                        background: $gray;
+                    &:nth-of-type(1) {
+                        @include banner-image("../images/sunset-8113697_1280.jpg", $dark-purple);
+                        @include banner-text(end, auto 0);
+                    }
+        
+                    button {
+                        @include button();
+                        margin-top: 1rem;
+                    }
+        
+                    @include sm {
+                        margin-top: 2.5rem;
+    
+                        &:nth-of-type(2) {
+                            @include banner-image("../images/landscape-7115513_1280.jpg", $dark-brown);
+                            @include banner-text(start, 0 auto);
+                        }
+        
+                        &:nth-of-type(3) {
+                            @include banner-image("../images/sand-6667422_1280.jpg", $dark-blue);
+                            @include banner-text(start, 0 auto);
+                        }
                     }
                 }
     
                 @include sm {
-                    margin-top: 2.5rem;
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-auto-columns: 100%;
+                    gap: 1rem;
+                    overflow-x: scroll;
                 }
-            }
-
-            @include sm {
-                display: grid;
-                grid-auto-flow: column;
-                grid-auto-columns: 100%;
-                gap: 1rem;
-                overflow-x: scroll;
             }
         }
 
@@ -278,8 +283,7 @@ body {
                     background-color: $light-gray;
     
                     .profile-figure {
-                        width: 7.5rem;
-                        height: 7.5rem;
+                        width: min(7.5rem, 100%);
                         border-radius: 100vh;
                         margin-bottom: 0.5rem;
     
@@ -291,6 +295,288 @@ body {
                 }
             }
         }
+
+        //CHECKOUT CSS
+        .checkout-header {
+            text-align: center;
+        }
+
+        .checkout-section {
+            border: 1px solid $gray;
+            padding: 2rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-block: 1rem;
+
+            @include xs {
+                padding: 2rem;
+
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .checkout-wrapper {
+            width: min(47.5rem, 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .shopping-bag {
+
+            .shopping-card {
+
+                margin-block: 1rem;
+
+                @include sm {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-block: auto;
+                }
+
+                .shopping-image {
+                    width: min(13rem, 100%);
+                    background-color: red;
+
+                    @include sm {
+                        width: min(15rem, 100%);
+                    }
+            
+                    img {
+                        aspect-ratio: 1;
+                    }
+                }
+
+                .shopping-form {
+                    margin-block: 3rem;
+                    margin-left: 2rem;
+
+                    @include sm {
+                        margin-block: auto;
+                    }
+
+                    .shopping-label {
+                        display: inline-block;
+                        margin-top: 2rem;
+
+                        .size-label {
+                            margin-right: 0.5rem;
+                        }
+
+                        .amount-label {
+
+                        }
+                    }
+
+                    .size-dropdown {
+                        @include dropdown(min(3.5rem, 100%));
+
+                        @include xs {
+                            width: min(4rem, 100%);
+                        } 
+                    }
+        
+                    input {
+                        @include input(min(3.5rem, 100%));
+
+                        @include xs {
+                            width: min(4rem, 100%);
+                        } 
+                    }
+                }
+
+                .shopping-icons {
+                    margin-left: 2rem;
+
+                    @include sm {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 6rem;
+                    }
+                }
+            }
+        }
+
+        .personal-info {
+
+            .personal-info-form {
+
+                .personal-delivery-address {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    column-gap: 0.5rem;
+
+                    margin-top: 2.5rem;
+
+                    @include sm {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    input {
+                        @include input();
+                    }
+
+                    .personal-label {
+                        &:nth-of-type(3) {
+                            @include sm {
+                                grid-column: span 2;
+                            }
+                        }
+                    }
+                }
+
+                .personal-contact-info {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+
+                    margin-block: 5rem 2.5rem;
+
+                    input {
+                        @include input();
+                    }
+                }
+
+                .contact-submit {
+                    @include input($bg-color: $black, $text-color: $white, $border-color: $black);
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+                }
+
+                .cancel-button {
+                    width: 100%;
+                    border: none;
+                    background: none;
+                    text-decoration: underline;
+                    color: $link-blue;
+                }
+            }
+        }
+
+        .delivery {
+            .delivery-options {
+                display: grid;
+                gap: 1rem;
+
+                legend {
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+
+                .delivery-label {
+                    display: grid;
+                    gap: 0.5rem;
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                    "one"
+                    "two"
+                    "three"
+                    "four";
+    
+                    border: 1px solid $gray;
+                    padding: 1rem;
+
+                    @include sm {
+                        grid-template-areas:
+                        "one three"
+                        "two two"
+                        "four four";
+                    }
+    
+                    span {
+                        &:nth-of-type(1) {
+                            grid-area: one;
+                        }
+    
+                        &:nth-of-type(2) {
+                            grid-area: two;
+                        }
+    
+                        &:nth-of-type(3) {
+                            grid-area: three;
+                        }
+    
+                        &:nth-of-type(4) {
+                            grid-area: four;
+                        }
+                    }
+
+                    .delivery-time {
+                        font-weight: bold;
+                        color: $dark-gray;
+                    }
+                }
+            }
+        }
+
+        .payment {
+
+            .payment-options {
+                border-bottom: 1px solid $gray;
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+                display: grid;
+                column-gap: 0.5rem;
+                grid-template-columns: repeat(1, 1fr);
+
+                input {
+                    @include input();
+                }
+
+                @include sm {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .payment-label {
+                    &:nth-of-type(1) {
+                        @include sm {
+                            grid-column: span 2;
+                        }
+                    }
+                }
+
+                legend {
+                    font-weight: bold;
+                }
+            }
+
+            .center-text {
+                text-align: center;
+                margin-block: 0.5rem;
+            }
+
+            .payment-amount {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .payment-submit {
+                @include input($bg-color: $black, $text-color: $white, $border-color: $black);
+                text-align: center;
+                margin-block: 0.5rem;
+            }
+
+            .privacy-options {
+                padding-inline: 1rem;
+                margin-top: 1.5rem;
+                display: grid;
+                text-align: center;
+
+                legend {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+
+    aside {
+        grid-area: aside;
     }
     
     footer {
@@ -322,10 +608,6 @@ body {
 
             &:nth-of-type(2) {
                 grid-area: two;
-
-                .strong-contact-text, .contact-icon {
-                    margin-right: 1rem;
-                }
             }
 
             &:nth-of-type(3) {

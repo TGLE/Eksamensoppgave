@@ -1,198 +1,289 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Eksamen</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="header-nav">
-            <form class="search-bar" action="/search" method="get">
-                <input type="search" class="search-input" placeholder="Søk her" aria-label="search">
-                <button class="search-submit" aria-label="submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+    <!DOCTYPE html>
+    <html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Eksamen</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="header-nav">
+                <form class="search-bar" action="/search" method="get">
+                    <input type="search" class="search-input" placeholder="Søk her" aria-label="search">
+                    <button class="search-submit" aria-label="submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
 
-            <ul class="nav-list">
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="#popular-products">Produkter</a></li>
-            </ul>
+                <ul class="nav-list">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="#popular-products">Produkter</a></li>
+                </ul>
 
-            <h1><a href="index.html">Logo</a></h1>
-    
-            <ul class="nav-list">
-                <li><a href="#popular-categories">Kategorier</a></li>
-                <li><a href="#contact-us">Kontakt oss</a></li>
-            </ul>
-    
-            <ul class="nav-list">
-                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Kasse</h2>
-        <section class="checkout-shopping-bag">
-            <h2>1. SHOPPINGBAGEN DIN</h2>
-            <figure>
-                <img src="../images/shoe-682218_1280.jpg" alt="Similar boot product">
-                <figcaption>
-                    <h3>Product name</h3>
-                    <p>Kr 1999</p>
-                    <p>Farge: beige</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/shoe-682218_1280.jpg" alt="Similar boot product">
-                <figcaption>
-                    <h3>Product name</h3>
-                    <p>Kr 1999</p>
-                    <p>Farge: beige</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/shoe-682218_1280.jpg" alt="Similar boot product">
-                <figcaption>
-                    <h3>Product name</h3>
-                    <p>Kr 1999</p>
-                    <p>Farge: beige</p>
-                </figcaption>
-            </figure>
-        </section>
-        <section class="checkout-personal-info">
-            <h2>2. DINE OPPLYSNINGER</h2>
-            <form>
-                <fieldset class="personal-delivery-address">
-                    <legend>Leveringsadresse</legend>
-                    <label class="personal-label">
-                        Fornavn
-                        <input type="text" name="first-name" required placeholder="Nora*">
-                    </label>
-                    <label class="personal-label">
-                        Etternavn
-                        <input type="text" name="last-name" required placeholder="Nordman*">
-                    </label>
-                    <label class="personal-label">
-                        Gateadresse
-                        <input type="text" name="address" required placeholder="BRA veien 4*">
-                    </label>
-                    <label class="personal-label">
-                        Postnummer
-                        <input type="number" name="post-number" required placeholder="1752*">
-                    </label>
-                    <label class="personal-label">
-                        Poststed
-                        <input type="text" name="post-office" required placeholder="Halden*">
-                    </label>
-                </fieldset>
-                <fieldset class="personal-contact-info">
-                    <legend>Kontaktinformasjon</legend>
-    
-                    <label class="personal-label">
-                        E-post
-                        <input type="email" number="email" required placeholder="Noranordman@hiof.no*">
-                    </label>
-                    <label class="personal-label">
-                        Telefon
-                        <input type="tel" number="phone" required placeholder="+4749***018*">
-                    </label>
-                </fieldset>
-                <input type="submit" value="Lagre">
-                <input type="reset" value="Avbryt">
-            </form>
-        </section>
-        <section class="checkout-delivery">
-            <h2>3. LEVERING</h2>
-            <form>
-                <fieldset class="delivery-options">
-                    <legend>LEVERINGSVALG</legend>
-                    <label class="delivery-label">
-                        <input type="radio" name="delivery" value="express-home">
-                        Ekspress Hjemlevering
-                    </label>
-                    <label class="delivery-label">
-                        <input type="radio" name="delivery" value="express-point">
-                        Ekspress Pakke til utleveringssted
-                    </label>
-                    <label class="delivery-standard">
-                        <input type="radio" name="delivery" value="standard-delivery">
-                        Standard Hjemlevering
-                    </label>
-                </fieldset>
-            </form>
-        </section>
-        <section class="checkout-payment">
-            <h2>4. BETALING</h2>
-            <form>
-                <fieldset>
-                    <legend>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></legend>
-                    <label class="payment-label">
-                        Kortnummer
-                        <input type="number" name="credit-number" required placeholder="342342****4435">
-                    </label>
-                    <label class="payment-label">
-                        Utløpsdato
-                        <input type="date" name="expiration-date" required>
-                    </label>
-                    <label class="payment-label">
-                        CVC/CVV
-                        <input type="number" name="cvc-cvv" pattern="[0-9]+{3,4}" required placeholder="CVC/CVV">
-                    </label>
-                </fieldset>
-                <p>Å betale inkl. mva.</p>
-                <p>1 199 kr</p>
-                <input type="submit" value="Fullfør kjøp">
-                <fieldset>
-                    <legend>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.<br>Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</legend>
-                    <label class="privacy-label">
-                        <input type="checkbox" name="send-letter">
-                        Ja takk! Send nyhetsbrev til meg.
-                    </label>
-                    <label class="privacy-label">
-                        <input type="checkbox" name="send-news">
-                        Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
-                    </label>
-                </fieldset>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <section class="footer-logo">
-            <h2>Logo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure accusantium debitis perspiciatis.</p>
-        </section>
-        <section class="footer-contacts" id="contact-us">
-            <h3>KONTAKT</h3>
-            <p><i class="fa-solid fa-location-dot contact-icon"></i><strong class="strong-footer-text">Adresse:</strong>B R A Veien 4, 1757 Halden</p>
-            <p><i class="fa-solid fa-phone contact-icon"></i><strong class="strong-footer-text">Telefon:</strong>69 60 80 00</p>
-            <p><i class="fa-solid fa-envelope contact-icon"></i><strong class="strong-footer-text">E-post:</strong>halden@hiof.no</p>
-            <p><i class="fa-solid fa-clock contact-icon"></i><strong class="strong-footer-text">Åpningstider:</strong>Stenger 15:00</p>
-        </section>
-        <section class="footer-shortcuts">
-            <h3>SNARVEIER</h3>
-            <ul>
-                <li><a href="#popular-products">Produkter</a></li>
-                <li><a href="#popular-categories">Kategorier</a></li>
-                <li><a href="#contact-us">Kontakt oss</a></li>
-            </ul>
-        </section>
-        <section class="footer-social-media">
-            <h3>SOSIALE MEDIER</h3>
-            <ul class="footer-social-media-links">
-                <li><a target ="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a target ="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a target ="_blank" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a target ="_blank" href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
-            </ul>
-        </section>
-    </footer>
-</body>
-</html>
+                <h1><a href="index.html">Logo</a></h1>
+        
+                <ul class="nav-list">
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#contact-us">Kontakt oss</a></li>
+                </ul>
+        
+                <ul class="nav-list">
+                    <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <a href="index.html" class="next-link"><i class="fa-solid fa-arrow-left space-right"></i>Fortsett og handle</a>
+            <h2 class="checkout-header">Kasse</h2>
+            <section class="checkout-section shopping-bag">
+                <div class="checkout-wrapper">
+                    <h2>1. SHOPPINGBAGEN DIN</h2>
+                    <article class="shopping-card">
+                        <figure class="shopping-image">
+                            <img src="https://cdn.pixabay.com/photo/2014/01/22/19/38/boot-250012_1280.jpg" alt="Similar boot product">
+                        </figure>
+                        <form class="shopping-form">
+                            <h3>PRODUCT NAME</h3>
+                            <p>Kr 1999</p>
+                            <p>Farge: beige</p>
+                            <span class="shopping-label">
+                                <label class="size-label">
+                                    Størrelse
+                                    <select class="size-dropdown" required>
+                                        <option value="">XS</option>
+                                        <option selected value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </label>
+                                <label class="amount-label">
+                                    Antall
+                                    <input type="number" name="item-amount" required value="1">
+                                </label>
+                            </span>
+                        </form>
+                        <span class="shopping-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </article>
+                    <article class="shopping-card">
+                        <figure class="shopping-image">
+                            <img src="https://cdn.pixabay.com/photo/2014/01/22/19/38/boot-250012_1280.jpg" alt="Boot product checkout">
+                        </figure>
+                        <form class="shopping-form">
+                            <h3>PRODUCT NAME</h3>
+                            <p>Kr 1999</p>
+                            <p>Farge: beige</p>
+                            <span class="shopping-label">
+                                <label class="size-label">
+                                    Størrelse
+                                    <select class="size-dropdown" required>
+                                        <option value="">XS</option>
+                                        <option selected value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </label>
+                                <label class="amount-label">
+                                    Antall
+                                    <input type="number" name="item-amount" required value="1">
+                                </label>
+                            </span>
+                        </form>
+                        <span class="shopping-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </article>
+                    <article class="shopping-card">
+                        <figure class="shopping-image">
+                            <img src="https://cdn.pixabay.com/photo/2014/01/22/19/38/boot-250012_1280.jpg" alt="Boot product checkout">
+                        </figure>
+                        <form class="shopping-form">
+                            <h3>PRODUCT NAME</h3>
+                            <p>Kr 1999</p>
+                            <p>Farge: beige</p>
+                            <span class="shopping-label">
+                                <label class="size-label">
+                                    Størrelse
+                                    <select class="size-dropdown" required>
+                                        <option value="">XS</option>
+                                        <option selected value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </label>
+                                <label class="amount-label">
+                                    Antall
+                                    <input type="number" name="item-amount" required value="1">
+                                </label>
+                            </span>
+                        </form>
+                        <span class="shopping-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="checkout-section personal-info">
+                <div class="checkout-wrapper">
+                    <h2>2. DINE OPPLYSNINGER</h2>
+                    <form class="personal-info-form">
+                        <fieldset class="personal-delivery-address">
+                            <legend>Leveringsadresse</legend>
+                            <label class="personal-label">
+                                Fornavn
+                                <input type="text" name="first-name" required placeholder="Nora*">
+                            </label>
+                            <label class="personal-label">
+                                Etternavn
+                                <input type="text" name="last-name" required placeholder="Nordman*">
+                            </label>
+                            <label class="personal-label">
+                                Gateadresse
+                                <input type="text" name="address" required placeholder="BRA veien 4*">
+                            </label>
+                            <label class="personal-label">
+                                Postnummer
+                                <input type="number" name="post-number" required placeholder="1752*">
+                            </label>
+                            <label class="personal-label">
+                                Poststed
+                                <input type="text" name="post-office" required placeholder="Halden*">
+                            </label>
+                        </fieldset>
+                        <fieldset class="personal-contact-info">
+                            <legend>Kontaktinformasjon</legend>
+                            <label class="personal-label">
+                                E-post
+                                <input type="email" name="email" required placeholder="Noranordman@hiof.no*">
+                            </label>
+                            <label class="personal-label">
+                                Telefon
+                                <input type="tel" name="phone" required placeholder="+4749***018*">
+                            </label>
+                        </fieldset>
+                        <input type="submit" class="contact-submit" value="Lagre">
+                        <input type="reset" class="cancel-button" value="Avbryt">
+                    </form>
+                </div>
+            </section>
+
+            <section class="checkout-section delivery">
+                <div class="checkout-wrapper">
+                    <h2>3. LEVERING</h2>
+                    <form>
+                        <fieldset class="delivery-options">
+                            <legend>LEVERINGSVALG</legend>
+                            <label class="delivery-label">
+                                <span>
+                                    <input type="radio" name="delivery" value="express-home">
+                                    <strong>Ekspress Hjemlevering</strong>
+                                </span> 
+                                <span class="delivery-time">3-4 Virkedager</span>
+                                <span>59 kr <i class="fa-solid fa-truck"></i></span>
+                                <span>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</span>
+                            </label>
+                            <label class="delivery-label">
+                                <span>
+                                    <input type="radio" name="delivery" value="express-point">
+                                    <strong>Ekspress Pakke til utleveringssted</strong>
+                                </span>
+                                <span class="delivery-time">1-3 Virkedager</span>
+                                <span>59 kr <i class="fa-brands fa-dhl"></i></span>
+                            </label>
+                            <label class="delivery-label">
+                                <span>
+                                    <input type="radio" name="delivery" value="standard-delivery">
+                                    <strong>Standard Hjemlevering</strong>
+                                </span>
+                                <span class="delivery-time">5-8 Virkedager</span>
+                                <span>Gratis <i class="fa-solid fa-box"></i></span>
+                                <span>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</span>
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+            <section class="checkout-section payment">
+                <div class="checkout-wrapper">
+                    <h2>4. BETALING</h2>
+                    <form>
+                        <fieldset class="payment-options">
+                            <legend>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></legend>
+                            <label class="payment-label">
+                                Kortnummer
+                                <input type="number" name="credit-number" required placeholder="342342****4435">
+                            </label>
+                            <label class="payment-label">
+                                Utløpsdato
+                                <input type="date" name="expiration-date" required>
+                            </label>
+                            <label class="payment-label">
+                                CVC/CVV
+                                <input type="number" name="cvc-cvv" required placeholder="CVC/CVV">
+                            </label>
+                        </fieldset>
+                        <p class="center-text">Å betale inkl. mva.</p>
+                        <p class="center-text payment-amount">1 199 kr</p>
+                        <input type="submit" class="payment-submit" value="Fullfør kjøp">
+                        <fieldset class="privacy-options">
+                            <legend>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</legend>
+                            <label class="privacy-label">
+                                <input type="checkbox" name="send-letter">
+                                Ja takk! Send nyhetsbrev til meg.
+                            </label>
+                            <label class="privacy-label">
+                                <input type="checkbox" name="send-news">
+                                Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="footer-logo">
+                <h2 class="logo-header">Logo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure accusantium debitis perspiciatis.</p>
+            </section>
+            <section class="footer-contacts" id="contact-us">
+                <h3>KONTAKT</h3>
+                <p><i class="fa-solid fa-location-dot space-right"></i><strong class="space-right">Adresse:</strong>B R A Veien 4, 1757 Halden</p>
+                <p><i class="fa-solid fa-phone space-right"></i><strong class="space-right">Telefon:</strong>69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope space-right"></i><strong class="space-right">E-post:</strong>halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock space-right"></i><strong class="space-right">Åpningstider:</strong>Stenger 15:00</p>
+            </section>
+            <section class="footer-shortcuts">
+                <h3>SNARVEIER</h3>
+                <ul>
+                    <li><a href="#popular-products">Produkter</a></li>
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#contact-us">Kontakt oss</a></li>
+                </ul>
+            </section>
+            <section class="footer-social-media">
+                <h3>SOSIALE MEDIER</h3>
+                <ul class="social-media-links">
+                    <li><a target ="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a target ="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a target ="_blank" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a target ="_blank" href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+    </html>
