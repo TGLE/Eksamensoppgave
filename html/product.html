@@ -39,27 +39,205 @@
         </nav>
     </header>
     <main>
-        <ol class="main-breadcrumb">
+        <ol class="product-breadcrumb">
             <li><a href="#">Hjem</a></li>
             <li><i class="fa-solid fa-angle-right"></i></li>
             <li><a href="#popular-products">Kategori</a></li>
             <li><i class="fa-solid fa-angle-right"></i></li>
-            <li><a href="#">Produktnavn</a></li>
+            <li><strong><a href="#">Produktnavn</a></strong></li>
         </ol>
-        <div class="grid-container">
-            <figure class="main-product-gallery">
+        <div class="product-grid-container">
+            <figure class="product-gallery">
                 <img src="https://cdn.pixabay.com/photo/2015/03/20/13/41/shoe-682218_1280.jpg" alt="Boot product product">
                 <img src="https://cdn.pixabay.com/photo/2015/03/20/13/41/shoe-682218_1280.jpg" alt="Boot product product">
                 <img src="https://cdn.pixabay.com/photo/2015/03/20/13/41/shoe-682218_1280.jpg" alt="Boot product product">
-            </figure>
-            <figure>
                 <img src="https://cdn.pixabay.com/photo/2015/03/20/13/41/shoe-682218_1280.jpg" alt="Boot product product">
             </figure>
-            <section class="main-product-info">
-                <h3>Produktnavn</h3>
-                <a href="#">MERKENAVN</a>
-                <p>5 195 kr inkl. mva.</p>
-                <p>Farge: <strong>beige</strong></p>
+            <section class="product-info">
+                <form class="product-form-container">
+                    <h2>Produktnavn</h2>
+                    <div class="product-info">
+                        <a href="#">MERKENAVN</a>
+                        <p>5 195 kr inkl. mva.</p>
+                        <p>Farge: <strong>beige</strong></p>
+                    </div>
+                    <span class="product-options">
+                        <select class="size-dropdown" required>
+                            <option value="">Velg størrelse</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <input type="submit" class="product-submit" value="Legg i handlekurv">
+                        <button class="favorite-product"><i class="fa-regular fa-heart"></i></button>
+                    </span>
+                </form>
+                <details>
+                    <summary><strong>Matriale og vedlikehold</strong>
+                        <span><i class="fa-solid fa-plus summary-arrow"></i></span></summary>
+                        <div class="center-list">
+                            <ul>
+                                <li>Overmateriale: 95% viskose, 5% elastan</li>
+                                <li>Materiale ermer: 100% polyester</li>
+                                <li>Materiale: Jersey</li>
+                            </ul>
+                        </div>
+                </details>
+                <details>
+                    <summary><strong>Produktdetaljer</strong>
+                        <span><i class="fa-solid fa-plus summary-arrow"></i></span></summary>
+                        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                </details>
+                <details>
+                    <summary><strong>Størrelsestabell</strong>
+                        <span><i class="fa-solid fa-plus summary-arrow"></i></span></summary>
+                        <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>EU</th>
+                                    <th>INT</th>
+                                    <th>BRYSTVIDDE</th>
+                                    <th>LIVVIDDE</th>
+                                    <th>HOFTEMÅL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>32</td>
+                                    <td>XXS</td>
+                                    <td>76</td>
+                                    <td>63</td>
+                                    <td>85</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>XS</td>
+                                    <td>80</td>
+                                    <td>66</td>
+                                    <td>89</td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>S</td>
+                                    <td>84</td>
+                                    <td>69</td>
+                                    <td>93</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>M</td>
+                                    <td>88</td>
+                                    <td>72</td>
+                                    <td>97</td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>L</td>
+                                    <td>92</td>
+                                    <td>76</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>XL</td>
+                                    <td>96</td>
+                                    <td>80</td>
+                                    <td>103</td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>XXL</td>
+                                    <td>100</td>
+                                    <td>85</td>
+                                    <td>106</td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>3XL</td>
+                                    <td>104</td>
+                                    <td>90</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>4XL</td>
+                                    <td>110</td>
+                                    <td>96.5</td>
+                                    <td>114</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>5XL</td>
+                                    <td>116</td>
+                                    <td>103</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <td>6XL</td>
+                                    <td>122</td>
+                                    <td>109.5</td>
+                                    <td>124</td>
+                                </tr>
+                                <tr>
+                                    <td>54</td>
+                                    <td>7XL</td>
+                                    <td>128</td>
+                                    <td>116</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>56</td>
+                                    <td>8XL</td>
+                                    <td>134</td>
+                                    <td>122.5</td>
+                                    <td>136</td>
+                                </tr>
+                                <tr>
+                                    <td>58</td>
+                                    <td>9XL</td>
+                                    <td>140</td>
+                                    <td>129</td>
+                                    <td>142</td>
+                                </tr>
+                                <tr>
+                                    <td>60</td>
+                                    <td>10XL</td>
+                                    <td>146</td>
+                                    <td>135.5</td>
+                                    <td>148</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </details>
+                <details>
+                    <summary><strong>Anmendelser</strong>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span>32</span>
+                        </span>
+                    </summary>
+                    <article class="review-article">
+                        <h3>Dubious Dinosaur</h3>
+                        <p>2024-10-02</p>
+                        <span class="review-ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
+                    </article>
+                </details>
+                
             </section>
         </div>
     </main>

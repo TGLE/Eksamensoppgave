@@ -61,6 +61,15 @@ body .space-right {
 body .next-link {
   color: #551A8B;
 }
+body .review-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+}
 body header {
   grid-area: header;
 }
@@ -158,10 +167,10 @@ body main .main-banner-area .slider-button {
   border: none;
   border-radius: 100vh;
   padding: 0.5rem 1rem;
+  min-height: 3rem;
   background-color: #f8fafc;
   color: #262626;
   cursor: pointer;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 body main .main-banner-area .slider-button:hover {
   background: #d1d5db;
@@ -200,10 +209,10 @@ body main .main-banner-area .banner-grid-container .banner button {
   border: none;
   border-radius: 100vh;
   padding: 0.5rem 1rem;
+  min-height: 3rem;
   background-color: #f8fafc;
   color: #262626;
   cursor: pointer;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
 }
 body main .main-banner-area .banner-grid-container .banner button:hover {
@@ -354,7 +363,7 @@ body main .reviews .grid-container {
   margin-top: 2rem;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 19rem;
+  grid-auto-columns: 20rem;
   gap: 1rem;
   overflow-x: scroll;
 }
@@ -448,6 +457,7 @@ body main .shopping-bag .shopping-card .shopping-form .size-dropdown {
   padding: 0.5rem;
   min-height: 3rem;
   border: none;
+  border-radius: 0;
   background-color: #d1d5db;
   color: #262626;
   cursor: pointer;
@@ -466,6 +476,7 @@ body main .shopping-bag .shopping-card .shopping-form input {
   min-height: 3rem;
   background-color: #f8fafc;
   color: #262626;
+  cursor: pointer;
 }
 @media only screen and (min-width: 475px) {
   body main .shopping-bag .shopping-card .shopping-form input {
@@ -487,7 +498,7 @@ body main .shopping-bag .shopping-card .shopping-icons {
 }
 body main .personal-info .personal-info-form .personal-delivery-address {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
   margin-top: 2.5rem;
@@ -506,6 +517,7 @@ body main .personal-info .personal-info-form .personal-delivery-address input {
   min-height: 3rem;
   background-color: #f8fafc;
   color: #262626;
+  cursor: pointer;
 }
 @media only screen and (min-width: 640px) {
   body main .personal-info .personal-info-form .personal-delivery-address .personal-label:nth-of-type(3) {
@@ -514,7 +526,7 @@ body main .personal-info .personal-info-form .personal-delivery-address input {
 }
 body main .personal-info .personal-info-form .personal-contact-info {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   margin-block: 5rem 2.5rem;
 }
 body main .personal-info .personal-info-form .personal-contact-info input {
@@ -526,6 +538,7 @@ body main .personal-info .personal-info-form .personal-contact-info input {
   min-height: 3rem;
   background-color: #f8fafc;
   color: #262626;
+  cursor: pointer;
 }
 body main .personal-info .personal-info-form .contact-submit {
   display: inline-block;
@@ -536,6 +549,7 @@ body main .personal-info .personal-info-form .contact-submit {
   min-height: 3rem;
   background-color: #262626;
   color: #f8fafc;
+  cursor: pointer;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -590,7 +604,7 @@ body main .payment .payment-options {
   display: grid;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
 }
 body main .payment .payment-options input {
   display: inline-block;
@@ -601,6 +615,7 @@ body main .payment .payment-options input {
   min-height: 3rem;
   background-color: #f8fafc;
   color: #262626;
+  cursor: pointer;
 }
 @media only screen and (min-width: 640px) {
   body main .payment .payment-options {
@@ -632,6 +647,7 @@ body main .payment .payment-submit {
   min-height: 3rem;
   background-color: #262626;
   color: #f8fafc;
+  cursor: pointer;
   text-align: center;
   margin-block: 0.5rem;
 }
@@ -644,29 +660,130 @@ body main .payment .privacy-options {
 body main .payment .privacy-options legend {
   margin-bottom: 1.5rem;
 }
-body main .main-breadcrumb {
+body main .product-breadcrumb {
   display: flex;
   gap: 1rem;
   margin-block: 2rem 1rem;
 }
-body main .grid-container {
+body main .product-grid-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  align-items: start;
 }
-body main .grid-container .main-product-gallery {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat 1, 1fr;
+@media only screen and (min-width: 640px) {
+  body main .product-grid-container {
+    grid-template-columns: minmax(0, 45rem) 1fr;
+  }
 }
-body main .grid-container .main-product-gallery img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body main .grid-container .main-product-gallery img:nth-of-type(2) {
+body main .product-grid-container img {
   min-height: 100%;
+  aspect-ratio: 1;
+}
+body main .product-grid-container .product-gallery {
+  display: grid;
+  row-gap: 1rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "one four four" "two four four" "three four four";
+}
+body main .product-grid-container .product-gallery img:nth-of-type(1) {
+  grid-area: one;
+}
+body main .product-grid-container .product-gallery img:nth-of-type(2) {
+  grid-area: two;
+}
+body main .product-grid-container .product-gallery img:nth-of-type(3) {
+  grid-area: three;
+}
+body main .product-grid-container .product-gallery img:nth-of-type(4) {
+  grid-area: four;
+}
+body main .product-grid-container .product-info {
+  display: grid;
+}
+body main .product-grid-container .product-info h2 {
+  margin-block: 1rem;
+}
+body main .product-grid-container .product-info .product-form-container .product-info {
+  display: grid;
+  gap: 0.5rem;
+}
+body main .product-grid-container .product-info .product-form-container .product-options {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr auto;
+  margin-block: 3rem;
+}
+body main .product-grid-container .product-info .product-form-container .product-options .size-dropdown {
+  display: inline-block;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  min-height: 3rem;
+  border: 1px solid #6b7280;
+  border-radius: 0.25rem;
+  background-color: #d1d5db;
+  color: #262626;
+  cursor: pointer;
+  grid-column: span 2;
+}
+body main .product-grid-container .product-info .product-form-container .product-options .product-submit {
+  display: inline-block;
+  border: 1px solid #262626;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  min-height: 3rem;
+  background-color: #262626;
+  color: #f8fafc;
+  cursor: pointer;
+  text-align: center;
+}
+body main .product-grid-container .product-info .product-form-container .product-options .favorite-product {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid #262626;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  min-height: 3rem;
+  background-color: #f8fafc;
+  color: #262626;
+  cursor: pointer;
+  text-align: center;
+}
+body main .product-grid-container .product-info .product-form-container .product-options .favorite-product:hover {
+  background: #d1d5db;
+}
+body main .product-grid-container .product-info details {
+  border-top: 2px solid #262626;
+  padding: 2rem;
+}
+body main .product-grid-container .product-info details[open] > summary {
+  margin-bottom: 2rem;
+}
+body main .product-grid-container .product-info details summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+body main .product-grid-container .product-info details .center-list {
+  text-align: center;
+}
+body main .product-grid-container .product-info details .center-list ul {
+  display: inline-block;
+  text-align: start;
+}
+body main .product-grid-container .product-info details .center-list li {
+  list-style: outside;
+}
+body main .product-grid-container .product-info details table {
+  margin-top: 1rem;
 }
 body aside {
   grid-area: aside;

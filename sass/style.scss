@@ -32,6 +32,16 @@ body {
         color: $link-purple;
     }
 
+    .review-article {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: 1px solid $gray;
+        border-radius: 2rem;
+        padding: 1rem;
+        background-color: $light-gray;
+    }
+
     header {
         grid-area: header;
 
@@ -135,7 +145,7 @@ body {
                 min-width: 3rem;
                 min-height: 3rem;
                 opacity: 0.7;
-                @include button();
+                @include button($border-radius: 100vh);
 
                 &:nth-of-type(1) {
                     left: 1rem;
@@ -161,7 +171,7 @@ body {
                     }
         
                     button {
-                        @include button();
+                        @include button($border-radius: 100vh);
                         margin-top: 1rem;
                     }
         
@@ -269,7 +279,7 @@ body {
                 margin-top: 2rem;
                 display: grid;
                 grid-auto-flow: column;
-                grid-auto-columns: 19rem;
+                grid-auto-columns: 20rem;
                 gap: 1rem;
                 overflow-x: scroll;
 
@@ -411,7 +421,7 @@ body {
 
                 .personal-delivery-address {
                     display: grid;
-                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-columns: 1fr;
                     column-gap: 0.5rem;
 
                     margin-top: 2.5rem;
@@ -435,7 +445,7 @@ body {
 
                 .personal-contact-info {
                     display: grid;
-                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-columns: 1fr;
 
                     margin-block: 5rem 2.5rem;
 
@@ -524,7 +534,7 @@ body {
                 margin-bottom: 2rem;
                 display: grid;
                 column-gap: 0.5rem;
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: 1fr;
 
                 input {
                     @include input();
@@ -574,6 +584,131 @@ body {
                 }
             }
         }
+
+        //PRODUCT CSS
+        .product-breadcrumb {
+            display: flex;
+            gap: 1rem;
+            margin-block: 2rem 1rem;
+        }
+
+        .product-grid-container {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+            align-items: start;
+            
+            @include sm {
+                grid-template-columns: minmax(0, 45rem) 1fr;
+            }
+
+            img {
+                min-height: 100%;
+                aspect-ratio: 1;
+            }
+
+            .product-gallery {
+                display: grid;
+                row-gap: 1rem;
+                column-gap: 1.5rem;
+                grid-auto-columns: 1fr;
+                grid-template-areas:
+                "one four four"
+                "two four four"
+                "three four four";
+
+                img {
+                    &:nth-of-type(1) {
+                        grid-area: one;
+                    }
+
+                    &:nth-of-type(2) {
+                        grid-area: two;
+                    }
+
+                    &:nth-of-type(3) {
+                        grid-area: three;
+                    }
+
+                    &:nth-of-type(4) {
+                        grid-area: four;
+                    }
+                }
+            }
+
+            .product-info {
+                display: grid;
+
+                h2 {
+                    margin-block: 1rem;
+                }
+
+                .product-form-container {
+
+                    .product-info {
+                        display: grid;
+                        gap: 0.5rem;
+                    }
+
+                    .product-options {
+                        display: grid;
+                        gap: 1rem;
+                        grid-template-columns: 1fr auto;
+                        margin-block: 3rem;
+
+                        .size-dropdown {
+                            @include dropdown($width: 100%, $border: 1px solid $dark-gray, $border-radius: 0.25rem);
+                            grid-column: span 2;
+                        }
+
+                        .product-submit {
+                            @include input($bg-color: $black, $text-color: $white, $border-color: $black);
+                            text-align: center;
+                        }
+
+                        .favorite-product {
+                            @include button($border: 1px solid $black);
+                            text-align: center;
+                        }
+                    }
+                }
+
+                details {
+                    border-top: 2px solid $black;
+                    padding: 2rem;
+
+                    &[open] > summary {
+                        margin-bottom: 2rem;
+                    }
+
+                    summary {
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+
+                    .center-list {
+                        text-align: center;
+
+                        ul {
+                            display: inline-block;
+                            text-align: start;
+                        }    
+
+                        li {
+                            list-style: outside;
+                        }
+                    }
+
+                    table {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
 
     aside {
         grid-area: aside;
