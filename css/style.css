@@ -50,7 +50,7 @@ body {
   grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
   width: min(75rem, 100% - 1rem);
   margin-inline: auto;
-  margin-block: 1rem;
+  margin-block: 2rem;
 }
 body a {
   color: #262626;
@@ -77,7 +77,6 @@ body .review-article {
 }
 body header {
   grid-area: header;
-  margin-block: 2rem;
 }
 body header h1 {
   font-size: 2.5rem;
@@ -86,9 +85,9 @@ body header h1 {
 body header .header-nav {
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-items: center;
   gap: 1rem;
@@ -194,7 +193,7 @@ body main .main-banner-area .banner-grid-container .banner {
 }
 body main .main-banner-area .banner-grid-container .banner:nth-of-type(1) {
   background-color: #581c87;
-  background-image: url("../images/sunset-8113697_1280.jpg");
+  background-image: url("../images/sunset.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: lighten;
@@ -228,7 +227,7 @@ body main .main-banner-area .banner-grid-container .banner button:hover {
   }
   body main .main-banner-area .banner-grid-container .banner:nth-of-type(2) {
     background-color: #78350f;
-    background-image: url("../images/landscape-7115513_1280.jpg");
+    background-image: url("../images/landscape.jpg");
     background-size: cover;
     background-position: center;
     background-blend-mode: lighten;
@@ -241,7 +240,7 @@ body main .main-banner-area .banner-grid-container .banner button:hover {
   }
   body main .main-banner-area .banner-grid-container .banner:nth-of-type(3) {
     background-color: #1e3a8a;
-    background-image: url("../images/sand-6667422_1280.jpg");
+    background-image: url("../images/sand.jpg");
     background-size: cover;
     background-position: center;
     background-blend-mode: lighten;
@@ -453,7 +452,7 @@ body main .popular-categories .grid-container .categories-article h3 {
     grid-template-areas: "one three three" "two four five";
   }
 }
-@media only screen and (min-width: 1054px) {
+@media only screen and (min-width: 1024px) {
   body main .popular-categories .grid-container {
     grid-template-areas: "one two three" "four four three" "four four five";
   }
@@ -467,7 +466,7 @@ body main .reviews .grid-container {
   overflow-x: scroll;
 }
 body main .reviews .grid-container .review-article .profile-figure {
-  width: min(7.5rem, 100%);
+  width: min(9.375rem, 100%);
   border-radius: 100vh;
   margin-bottom: 0.5rem;
 }
@@ -482,8 +481,8 @@ body main .checkout-section {
   border: 1px solid #d1d5db;
   padding: 2rem 1rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-block: 1rem;
 }
 @media only screen and (min-width: 475px) {
@@ -498,6 +497,7 @@ body main .checkout-wrapper {
   gap: 1rem;
 }
 body main .shopping-bag .shopping-card {
+  width: 100%;
   margin-block: 1rem;
 }
 @media only screen and (min-width: 640px) {
@@ -518,6 +518,7 @@ body main .shopping-bag .shopping-card .shopping-image {
   }
 }
 body main .shopping-bag .shopping-card .shopping-image img {
+  width: 100%;
   aspect-ratio: 1;
 }
 body main .shopping-bag .shopping-card .shopping-form {
@@ -575,9 +576,9 @@ body main .shopping-bag .shopping-card .shopping-icons {
 @media only screen and (min-width: 640px) {
   body main .shopping-bag .shopping-card .shopping-icons {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
     margin-bottom: 6rem;
   }
@@ -757,7 +758,7 @@ body main .product-grid-container {
   grid-template-columns: 1fr;
   align-items: start;
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1024px) {
   body main .product-grid-container {
     grid-template-columns: minmax(0, 45rem) 1fr;
   }
@@ -791,6 +792,10 @@ body main .product-grid-container .product-info {
 }
 body main .product-grid-container .product-info h2 {
   margin-block: 1rem;
+}
+body main .product-grid-container .product-info .star-reviews {
+  display: flex;
+  gap: 0.25rem;
 }
 body main .product-grid-container .product-info .product-form-container .product-info {
   display: grid;
@@ -947,8 +952,7 @@ body footer {
   grid-auto-columns: 1fr;
   grid-template-areas: "one" "two" "three" "four";
   border-top: 3px solid #d1d5db;
-  padding-top: 2.5rem;
-  margin-top: 2rem;
+  padding-block: 2.5rem 5rem;
 }
 body footer h2, body footer h3 {
   margin-bottom: 1rem;
